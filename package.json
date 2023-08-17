@@ -1,0 +1,23 @@
+{
+  "name": "exerciciosnodejs",
+  "version": "1.0.0",
+  "description": "refazendo os exercícios da lista usando Node.js e Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dorilikeswine/exerciciosNodejs.git"
+  },
+  "author": "Amanda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dorilikeswine/exerciciosNodejs/issues"
+  },
+  "homepage": "https://github.com/dorilikeswine/exerciciosNodejs#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
