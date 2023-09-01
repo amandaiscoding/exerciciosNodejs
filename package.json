@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dorilikeswine/exerciciosNodejs.git"
+    "url": "git+https://github.com/amandaiscoding/exerciciosNodejs.git"
   },
   "author": "Amanda",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dorilikeswine/exerciciosNodejs/issues"
+    "url": "https://github.com/amandaiscoding/exerciciosNodejs/issues"
   },
-  "homepage": "https://github.com/dorilikeswine/exerciciosNodejs#readme",
+  "homepage": "https://github.com/amandaiscoding/exerciciosNodejs#readme",
   "dependencies": {
     "express": "^4.18.2"
   },

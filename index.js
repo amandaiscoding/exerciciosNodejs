@@ -25,6 +25,8 @@ const { calculoJuros } = require('./exercicios/ex19.js')
 const { pecas } = require('./exercicios/ex20.js')
 const { crime } = require('./exercicios/ex21.js')
 const { multa } = require('./exercicios/ex22.js')
+const { batata } = require('./exercicios/ex23.js')
+const { tabuadaFor } = require('./exercicios/ex24.js')
 
 
 const app = express(); 
@@ -217,6 +219,22 @@ app.post('/api/ex22', (req, res) => {
         message: `resultado: ${result}`
     })
 })
+
+app.post('/api/ex23', (req, res) => {
+    const result = batata(req.body.num)
+    res.status(200).json({
+        message: `resultado: ${result}`
+    })
+})
+
+app.post('/api/ex24', (req, res) => {
+    const result = tabuadaFor(req.body.num)
+    res.status(200).json({
+        message: `resultado: ${result}`
+    })
+})
+
+
 
 
 
