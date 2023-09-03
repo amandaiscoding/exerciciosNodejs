@@ -1,2 +1,2 @@
 # exerciciosNodejs
-refazendo os exercícios da lista usando Node.js e Express
+exercícios da lista usando Node.js e Express + testing com Jest
