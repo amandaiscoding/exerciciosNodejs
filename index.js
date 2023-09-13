@@ -15,7 +15,6 @@ const { calc } = require('./exercicios/ex11.js')
 const { posneg } = require('./exercicios/ex12.js')
 const { imppar } = require('./exercicios/ex13.js')
 const { maiormenor } = require('./exercicios/ex14.js')
-
 const { imposto } = require('./exercicios/ex16.js')
 const { menor } = require('./exercicios/d3.js')
 const { bissexto } = require('./exercicios/d4.js')
@@ -25,8 +24,13 @@ const { calculoJuros } = require('./exercicios/ex19.js')
 const { pecas } = require('./exercicios/ex20.js')
 const { crime } = require('./exercicios/ex21.js')
 const { multa } = require('./exercicios/ex22.js')
-const { batata } = require('./exercicios/ex23.js')
-const { tabuadaFor } = require('./exercicios/ex24.js')
+const { batata } = require('./exercicios/ex23rep.js')
+const { tabuadaFor } = require('./exercicios/ex24arrays.js')
+const { negArray } = require('./exercicios/ex28arrays.js')
+const { combustivel } = require('./exercicios/ex31.js')
+const { semana } = require('./exercicios/ex32.js')
+const { mes } = require('./exercicios/ex33.js')
+const { letras } = require('./exercicios/ex34.js')
 
 
 const app = express(); 
@@ -38,6 +42,7 @@ app.get('/api/0', (req, res) => {
         message: `Hello World!`
     })
 })
+
 app.post('/api/ex1', (req, res) => {
     const result = somar(req.body.num1, req.body.num2)
     res.status(200).json({
@@ -220,24 +225,54 @@ app.post('/api/ex22', (req, res) => {
     })
 })
 
-app.post('/api/ex23', (req, res) => {
+app.post('/api/ex23rep', (req, res) => {
     const result = batata(req.body.num)
     res.status(200).json({
         message: `resultado: ${result}`
     })
 })
 
-app.post('/api/ex24', (req, res) => {
+app.post('/api/ex24arrays', (req, res) => {
     const result = tabuadaFor(req.body.num)
     res.status(200).json({
         message: `resultado: ${result}`
     })
 })
 
+app.post('/api/ex28arrays', (req, res) => {
+    const result = negArray(req.body.numeros)
+    res.status(200).json({
+        message: `resultado: ${result}`
+    })
+})
 
+app.post('/api/ex31', (req, res) => {
+    const result = combustivel(req.body.numero)
+    res.status(200).json({
+        message: `resultado: ${result}`
+    })
+})
 
+app.post('/api/ex32', (req, res) => {
+    const result = semana(req.body.numero)
+    res.status(200).json({
+        message: `resultado: ${result}`
+    })
+})
 
+app.post('/api/ex33', (req, res) => {
+    const result = mes(req.body.numero)
+    res.status(200).json({
+        message: `resultado: ${result}`
+    })
+})
 
+app.post('/api/ex34', (req, res) => {
+    const result = letras(req.body.letra)
+    res.status(200).json({
+        message: `resultado: ${result}`
+    })
+})
 
 
 app.listen(port, () => { 
