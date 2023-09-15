@@ -43,11 +43,18 @@ app.get('/api/0', (req, res) => {
     })
 })
 
-app.post('/api/ex1', (req, res) => {
-    const result = somar(req.body.num1, req.body.num2)
-    res.status(200).json({
+app.post('/api/ex1', (req, res) => { 
+    try {
+        const result = somar(req.body.num1, req.body.num2)
+        res.status(200).json({
         message: `resultado: ${result}`
     })
+    } catch (error) { // ou (err)
+        console.log(error)
+        res.status(500).json ({
+        message: `erro: ${error.message}`
+    })
+}
 })
 
 app.post('/api/ex2', (req, res) => {
@@ -184,17 +191,31 @@ app.post('/api/d4', (req, res) => {
 })
 
 app.post('/api/ex17', (req, res) => {
-    const result = mediaPomderada(req.body.nota1, req.body.nota2, req.body.nota3)
-    res.status(200).json({
-        message: `resultado: ${result}`
+    try {
+        const result = mediaPomderada(req.body.nota1, req.body.nota2, req.body.nota3)
+        res.status(200).json({
+            message: `resultado: ${result}`
     })
+    } catch (error) { 
+        console.log(error)
+        res.status(500).json ({
+        message: `erro: ${error.message}`
+    })
+    }
 })
 
 app.post('/api/ex18', (req, res) => {
-    const result = carro(req.body.custoFabrica)
-    res.status(200).json({
+    try {
+        const result = carro(req.body.custoFabrica)
+        res.status(200).json({
         message: `resultado: ${result}`
     })
+    } catch (error) {
+        console.log(error)
+        res.status(500).json ({
+        message: `erro: ${error.message}`
+    })
+    }
 })
 
 app.post('/api/ex19', (req, res) => {
